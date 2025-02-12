@@ -1,14 +1,9 @@
 pipeline {
     agent any
-
-    environment {
-        NODEJS_VERSION = '20' 
-    }
-
     stages {
         stage('Checkout Code') {
             steps {
-                checkout scm
+              echo 'Checking out code from Git'
             }
         }
 
