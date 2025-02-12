@@ -3,9 +3,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    echo 'hello'
-                }
+                echo 'Building..'
+                bat 'npm install'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+                bat 'npm test'
             }
         }
     }
